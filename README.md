@@ -26,6 +26,16 @@ The server exposes eight tools: `send_text`, `send_email`, `preview_message`, `c
 
 The key is read from `POMBITY_API_KEY` at connection time and is never stored in this plugin or your project.
 
+## Claude Desktop extension (.mcpb)
+
+`mcpb/` builds the Claude Desktop extension: a bundled [`mcp-remote`](https://github.com/geelen/mcp-remote) bridge to the same remote server. Install prompts for your API key and stores it in the OS keychain (`user_config`, sensitive). Download `pombity-<version>.mcpb` from this repository's Releases and double-click it (or Claude Desktop → Settings → Extensions → Install Extension…).
+
+Build it yourself:
+
+```sh
+cd mcpb && npm install --omit=dev && npx -y @anthropic-ai/mcpb pack
+```
+
 ## License
 
 MIT — see [LICENSE](LICENSE).

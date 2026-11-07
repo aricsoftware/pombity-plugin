@@ -1,0 +1,9 @@
+{
+  "name": "pombity-mcpb",
+  "private": true,
+  "description": "Build directory for the Pombity Claude Desktop extension (.mcpb). Build: npm install --omit=dev && npx @anthropic-ai/mcpb pack",
+  "license": "MIT",
+  "dependencies": {
+    "mcp-remote": "0.16.4"
+  }
+}

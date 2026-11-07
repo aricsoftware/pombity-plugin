@@ -1,0 +1,41 @@
+{
+  "manifest_version": "0.3",
+  "name": "pombity",
+  "display_name": "Pombity",
+  "version": "1.0.0",
+  "description": "Texting for your application, with the compliance built in: SMS and email over the Pombity MCP server.",
+  "long_description": "Connects Claude Desktop to Pombity (Aric Communication Service) through its remote MCP server at https://mcp.pombity.com/mcp. Eight tools: send_text, send_email, preview_message, check_consent, get_delivery_report, get_usage, request_verified_destination, confirm_verified_destination. Consent, STOP/HELP, quiet hours, verified destinations, and quotas are enforced server-side; every refusal carries a named error code. Get a key at https://docs.pombity.com — a sandbox key (ak_test_…) sends nothing to a carrier and returns realistic delivery reports.",
+  "author": { "name": "Aric Software", "url": "https://docs.pombity.com" },
+  "homepage": "https://docs.pombity.com",
+  "repository": { "type": "git", "url": "https://github.com/aricsoftware/pombity-plugin" },
+  "license": "MIT",
+  "keywords": ["sms", "email", "messaging", "mcp", "pombity"],
+  "server": {
+    "type": "node",
+    "entry_point": "node_modules/mcp-remote/dist/proxy.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/node_modules/mcp-remote/dist/proxy.js",
+        "https://mcp.pombity.com/mcp",
+        "--transport", "http-only",
+        "--header", "Authorization:${AUTH_HEADER}"
+      ],
+      "env": {
+        "AUTH_HEADER": "Bearer ${user_config.api_key}"
+      }
+    }
+  },
+  "user_config": {
+    "api_key": {
+      "type": "string",
+      "title": "Pombity API key",
+      "description": "Your Pombity API key (ak_live_… or ak_test_…). Get one at https://docs.pombity.com.",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "compatibility": {
+    "platforms": ["darwin", "win32"]
+  }
+}

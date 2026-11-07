@@ -1,0 +1,3 @@
+.mcpbignore
+*.mcpb
+package-lock.json
