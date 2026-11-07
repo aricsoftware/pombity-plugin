@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "pombity": {
+      "type": "http",
+      "url": "https://mcp.pombity.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${POMBITY_API_KEY}"
+      }
+    }
+  }
+}

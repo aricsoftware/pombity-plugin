@@ -1,0 +1,12 @@
+{
+  "name": "pombity",
+  "owner": { "name": "Aric Software", "url": "https://docs.pombity.com" },
+  "description": "Pombity plugin marketplace",
+  "plugins": [
+    {
+      "name": "pombity",
+      "source": "./",
+      "description": "Pombity messaging tools over remote MCP. Requires POMBITY_API_KEY in the environment."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "pombity",
+  "version": "1.0.0",
+  "description": "Connects Claude Code to Pombity (texting for your application, with the compliance built in) through its remote MCP server: send SMS and email, preview, check consent, read delivery reports and usage, and complete the verified-destination opt-in flow.",
+  "author": { "name": "Aric Software", "url": "https://docs.pombity.com" },
+  "homepage": "https://docs.pombity.com",
+  "repository": "https://github.com/aricsoftware/pombity-plugin",
+  "license": "MIT",
+  "keywords": ["sms", "email", "messaging", "mcp", "pombity"]
+}
