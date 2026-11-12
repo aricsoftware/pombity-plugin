@@ -1,0 +1,11 @@
+# Dependency hygiene on every aricsoftware repo (S-07; this repository was
+# created after S-07 and gained this file 2026-11-11). The plugin has no
+# package manifest and no workflow today, so there is nothing to update yet;
+# the entry is here so a workflow added later is watched from its first day.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
